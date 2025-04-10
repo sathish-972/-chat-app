@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="user-profile">
+                <div class="avatar" id="user-avatar">U</div>
+                <div class="user-info">
+                    <input type="text" id="username-input" placeholder="Your name">
+                    <div class="status online">Online</div>
+                </div>
+            </div>
+            
+            <div class="rooms-section">
+                <h3>Chat Rooms</h3>
+                <ul id="room-list">
+                    <li class="room active" data-room="general">General</li>
+                    <li class="room" data-room="random">Random</li>
+                </ul>
+                <button id="create-room-btn">+ Create Room</button>
+            </div>
+            
+            <div class="users-section">
+                <h3>Online Users</h3>
+                <ul id="user-list">
+                    <!-- Users will be populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="chat-area">
+            <div class="chat-header">
+                <h2 id="current-room">General</h2>
+                <div class="room-actions">
+                    <button id="leave-room-btn">Leave Room</button>
+                </div>
+            </div>
+            
+            <div class="messages" id="messages">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <div class="message-input">
+                <textarea id="message-input" placeholder="Type your message here..."></textarea>
+                <button id="send-btn">Send</button>
+                <button id="file-btn" title="Send file">📎</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
